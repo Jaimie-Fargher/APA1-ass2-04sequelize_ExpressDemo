@@ -31,6 +31,10 @@ block content
                   option(value='Done', selected=task.status === 'Done') Done
               form(action=`/tasks/${task.id}/delete`, method='POST', style='display: inline;')
                 button(type='submit') Delete
+
+                
+              form(action=`/tasks/${task.id}/update`, method='POST', style='display: inline;')
+                button(type='submit') Update 
   else
     p No tasks found.
 

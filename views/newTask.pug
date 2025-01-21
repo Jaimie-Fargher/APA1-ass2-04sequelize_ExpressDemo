@@ -24,10 +24,19 @@ block content
         option(value='') Select a project
         each project in projects
           option(value=project.id)= project.name
-    div
+    
+    //div
       label(for='tags') Tags:
       select#tags(name='tags', multiple)
         each tag in tags
           option(value=tag.id)= tag.name
+    //button(type='submit') Add Task
+
+    label Tags:
+      div#tags
+        each tag in tags
+          label
+            input(type='checkbox', name='tags', value=tag.id)
+            = tag.name
     button(type='submit') Add Task
 
